@@ -227,6 +227,15 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
+      <div [contentEditable]="isEditable"></div>
+      <button (click)="greet()"></button>
+      <section>
+        There's a secret message for you, hover to reveal 👀
+        {{ message }}
+      </section>
+      <app-user name="Simran" />
+      <app-child (addItemEvent)="addItem($event)" />
+      <p>🐢 all the way down {{ items.length }}</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
