@@ -1,0 +1,18 @@
+<p>home works!</p>
+<ul>
+    <li><a [routerLink]="['/home/home1']">Home1</a></li>
+    <li><a [routerLink]="['/home/home2']">Home2</a></li>
+</ul>
+<form [formGroup]="profileForm" (ngSubmit)="handleSubmit()">
+    Name
+    <input type="text" formControlName="name" />
+    email
+    <input type="email" formControlName="email" />
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+  <h2>Profile Form</h2>
+  <p>Name: {{ profileForm.value.name }}</p>
+  <p>Email: {{ profileForm.value.email }}</p>
+  
+<router-outlet></router-outlet>

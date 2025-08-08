@@ -179,6 +179,12 @@
 
 <main class="main">
   <div class="content">
+    <nav>
+      <a routerLink="/">Home</a>
+      |
+      <a routerLink="/user">User</a>
+    </nav>
+    <router-outlet />
     <div class="left-side">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -227,15 +233,7 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
-      <div [contentEditable]="isEditable"></div>
-      <button (click)="greet()"></button>
-      <section>
-        There's a secret message for you, hover to reveal 👀
-        {{ message }}
-      </section>
-      <app-user name="Simran" />
-      <app-child (addItemEvent)="addItem($event)" />
-      <p>🐢 all the way down {{ items.length }}</p>
+      <p>Car Listing: {{ display }}</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
